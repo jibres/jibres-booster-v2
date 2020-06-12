@@ -11806,11 +11806,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\web\\projects\\jibres-booster-v2\\jibres-booster-v2\\jibres-booster-v2.csproj",
+      "projectUniqueName": "D:\\web\\projects\\jibres-booster-v2\\jibres-booster-v2.csproj",
       "projectName": "jibres-booster-v2",
-      "projectPath": "D:\\web\\projects\\jibres-booster-v2\\jibres-booster-v2\\jibres-booster-v2.csproj",
+      "projectPath": "D:\\web\\projects\\jibres-booster-v2\\jibres-booster-v2.csproj",
       "packagesPath": "C:\\Users\\Javad\\.nuget\\packages\\",
-      "outputPath": "D:\\web\\projects\\jibres-booster-v2\\jibres-booster-v2\\obj\\",
+      "outputPath": "D:\\web\\projects\\jibres-booster-v2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -11,7 +11,7 @@
     <NeutralLanguage></NeutralLanguage>
     <AssemblyName>Jibres Booster</AssemblyName>
     <RootNamespace>JibresBooster</RootNamespace>
-    <ApplicationIcon />
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
     <Win32Resource />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Description>Boost power of Jibres to break windows!</Description>

@@ -19,10 +19,17 @@
     <Copyright>Some right reserved!</Copyright>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <UserSecretsId>5991b26e-d604-4ea9-8a5a-33d15698199f</UserSecretsId>
+    <SignAssembly>false</SignAssembly>
+    <OutputType>Exe</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
   </PropertyGroup>
 
   <ItemGroup>

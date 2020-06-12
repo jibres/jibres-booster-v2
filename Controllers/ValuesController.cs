@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace jibres_booster_v2.Controllers
+namespace JibresBooster.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

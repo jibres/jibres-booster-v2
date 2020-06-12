@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace jibres_booster_v2
+namespace JibresBooster
 {
     public class Startup
     {

@@ -20,7 +20,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "nativeDebugging": true,
+      "nativeDebugging": false,
       "applicationUrl": "https://jibres.local:9759/"
     },
     "JibresBooster": {

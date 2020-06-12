@@ -1,22 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using System.IO.Ports;
-using System.Text.RegularExpressions;
 using Kiccc.Ing.PcPos;
 using Kiccc.Ing.PcPos.Serial;
-using JibresBooster.lib;
-using System.Threading;
 
 namespace JibresBooster.lib.PcPos
 {
-    class JibresKiccc
+    internal class JibresKiccc
     {
         private static SerialIngenico myKiccc;
-        private static Boolean INIT;
-        private static Boolean BUSY;
+        private static bool INIT;
+        private static bool BUSY;
 
         // default value
         private string SerialNo;
@@ -44,7 +39,7 @@ namespace JibresBooster.lib.PcPos
                 return;
             }
 
-            if(!INIT)
+            if (!INIT)
             {
                 BUSY = false;
 
@@ -54,7 +49,7 @@ namespace JibresBooster.lib.PcPos
                 // define received function to get async result
                 myKiccc.ResponseReceived += async (s, ev) =>
                 {
-                    var paymentResult = ev.Response.ToString();
+                    string paymentResult = ev.Response.ToString();
                     Dictionary<string, string> paymentResultArray = reader.xml(paymentResult);
                     string paymentResultString = lib.str.fromDic(paymentResultArray, "\n\t");
                     // get response and send it to server to save
@@ -256,18 +251,18 @@ namespace JibresBooster.lib.PcPos
 
 
 
-        private Boolean connect()
+        private bool connect()
         {
             // try to connect
             try
             {
-                if(string.IsNullOrEmpty(cmbCom))
+                if (string.IsNullOrEmpty(cmbCom))
                 {
                     notif.error("خطا در اتصال", "کارت‌خوان پی‌سی‌پوز ایران کیش شناسایی نشد!", true);
                     log.save("*** PcPos is not detected ***");
                     return false;
                 }
-                if(port.exist(cmbCom))
+                if (port.exist(cmbCom))
                 {
                     terminate();
                     // Initiate Service
@@ -302,7 +297,7 @@ namespace JibresBooster.lib.PcPos
             try
             {
                 // reset old connection before create new one
-                var myState = myKiccc.State.ToString();
+                string myState = myKiccc.State.ToString();
                 log.save("State = " + myState);
                 return myState;
             }
@@ -316,7 +311,7 @@ namespace JibresBooster.lib.PcPos
         }
 
 
-        private Boolean reset()
+        private bool reset()
         {
             try
             {
@@ -342,7 +337,7 @@ namespace JibresBooster.lib.PcPos
         }
 
 
-        private Boolean terminate()
+        private bool terminate()
         {
             try
             {
@@ -368,15 +363,15 @@ namespace JibresBooster.lib.PcPos
         }
 
 
-        private Boolean sale()
+        private bool sale()
         {
             // try to sale
             try
             {
                 if (string.IsNullOrEmpty(info1))
                 {
-                    var res = myKiccc.Sale(Amount);
-                    var xml = lib.reader.xml(res);
+                    string res = myKiccc.Sale(Amount);
+                    Dictionary<string, string> xml = lib.reader.xml(res);
                     log.save(res);
                     log.save(lib.str.fromDic(xml));
 
@@ -388,7 +383,7 @@ namespace JibresBooster.lib.PcPos
                     log.save("\t Info2 \t" + info2);
                     log.save("\t Info3 \t" + info3);
                     log.save("\t Info4 \t" + info4);
-                    var res = myKiccc.SaleWithExtraParamAndPrintableInfo(Amount, "1", info1, info2, info3, info4);
+                    string res = myKiccc.SaleWithExtraParamAndPrintableInfo(Amount, "1", info1, info2, info3, info4);
                     log.save(res);
 
                     return true;
@@ -403,7 +398,7 @@ namespace JibresBooster.lib.PcPos
         }
 
 
-        private Boolean saleAsync()
+        private bool saleAsync()
         {
             BUSY = true;
             // try to sale
@@ -414,7 +409,7 @@ namespace JibresBooster.lib.PcPos
 
                 if (string.IsNullOrEmpty(info1))
                 {
-                    var res = myKiccc.BeginSale(Amount);
+                    bool res = myKiccc.BeginSale(Amount);
                     log.save("Async sale result " + res);
                     notif.info("ارسال درخواست", "لطفا روی کارت‌خوان ایران کیش کارت را بکشید" + "\n" + "مبلغ " + Amount + " تومان", true);
                     return true;
@@ -425,7 +420,7 @@ namespace JibresBooster.lib.PcPos
                     log.save("\t Info2 \t" + info2);
                     log.save("\t Info3 \t" + info3);
                     log.save("\t Info4 \t" + info4);
-                    var res = myKiccc.BeginSaleWithExtraParamAndPrintableInfo(Amount, "1", info1, info2, info3, info4);
+                    bool res = myKiccc.BeginSaleWithExtraParamAndPrintableInfo(Amount, "1", info1, info2, info3, info4);
                     log.save("Async sale result with info " + res);
                     notif.info("ارسال درخواست به کارت‌خوان", "لطفا روی کارت‌خوان ایران کیش کارت را بکشید" + "\n" + "مبلغ " + Amount + " تومان", true);
                     return true;
@@ -443,14 +438,14 @@ namespace JibresBooster.lib.PcPos
 
         public async Task<int> autoCancelOpr(string _amount)
         {
-            var rnd = new Random(DateTime.Now.Millisecond);
+            Random rnd = new Random(DateTime.Now.Millisecond);
             string thisRequestId = _amount + "-" + rnd.Next(100000, 999999).ToString();
             lastRequestId = thisRequestId;
 
             await Task.Delay(30000);
-            if(BUSY)
+            if (BUSY)
             {
-                if(lastRequestId == thisRequestId)
+                if (lastRequestId == thisRequestId)
                 {
                     notif.warn("انصراف خودکار", "عملیات به‌صورت خودکار پس از ۳۰ ثانیه قطع شد", true);
                     log.save("Hey, What are you doing! Auto Cancel Operation.");

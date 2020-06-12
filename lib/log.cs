@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JibresBooster.lib
 {
-    class log
+    internal class log
     {
         public static string logPath;
         public static void info(string _data)
@@ -58,19 +54,13 @@ namespace JibresBooster.lib
             // try to create log addr
             if (string.IsNullOrEmpty(logPath))
             {
-                var appLoc = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData).ToString();
-                var ermileLoc = Path.Combine(appLoc, "Ermile");
-                var jibresLoc = Path.Combine(ermileLoc, "Jibres");
-                var jibresLogLoc = Path.Combine(jibresLoc, "log");
+                string appLoc = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData).ToString();
+                string jibresLoc = Path.Combine(appLoc, "Jibres");
+                string jibresLogLoc = Path.Combine(jibresLoc, "log");
 
                 //try to create folder location
                 try
                 {
-                    // create Ermile folder
-                    if (!Directory.Exists(ermileLoc))
-                    {
-                        Directory.CreateDirectory(ermileLoc);
-                    }
                     // create Jibres folder
                     if (!Directory.Exists(jibresLoc))
                     {
@@ -88,7 +78,7 @@ namespace JibresBooster.lib
                     Console.WriteLine(ex.Message);
                 }
 
-                var fileName = "log" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".txt";
+                string fileName = "log" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".log";
                 logPath = Path.Combine(jibresLogLoc, fileName);
             }
         }

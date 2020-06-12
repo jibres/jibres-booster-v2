@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace JibresBooster.lib
 {
-    class save
+    internal class save
     {
-        public static readonly string JibresHook = "https://jibres.com/hook/booster1/";
+        public static readonly string JibresHook = "https://jibres.ir/hook/booster1/";
         private static readonly HttpClient client = new HttpClient();
 
         public static async Task<bool> post(Dictionary<string, string> _vals)
         {
             try
             {
-                var content = new FormUrlEncodedContent(_vals);
+                FormUrlEncodedContent content = new FormUrlEncodedContent(_vals);
 
-                var response = await client.PostAsync(JibresHook, content);
+                HttpResponseMessage response = await client.PostAsync(JibresHook, content);
 
-                var responseString = await response.Content.ReadAsStringAsync();
+                string responseString = await response.Content.ReadAsStringAsync();
 
                 return true;
             }
@@ -36,7 +33,7 @@ namespace JibresBooster.lib
         {
             try
             {
-                var responseString = await client.GetStringAsync(JibresHook);
+                string responseString = await client.GetStringAsync(JibresHook);
 
                 return true;
             }

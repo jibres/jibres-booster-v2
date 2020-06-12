@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Xml;
 
 namespace JibresBooster.lib
 {
-    class reader
+    internal class reader
     {
         public static Dictionary<string, string> xml(string _str)
         {
-            if(string.IsNullOrEmpty(_str))
+            if (string.IsNullOrEmpty(_str))
             {
                 return null;
             }
@@ -34,8 +30,8 @@ namespace JibresBooster.lib
 
         public static string xmlReadable(string _str)
         {
-            var xmlDic = xml(_str);
-            var prettyResult = lib.str.fromDic(xmlDic, "\n\t");
+            Dictionary<string, string> xmlDic = xml(_str);
+            string prettyResult = lib.str.fromDic(xmlDic, "\n\t");
             return prettyResult;
         }
 

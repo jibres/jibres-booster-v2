@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JibresBooster.lib
 {
-    class file
+    internal class file
     {
         public static void save(string _loc, string _data)
         {

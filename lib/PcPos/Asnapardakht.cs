@@ -1,16 +1,13 @@
-﻿using PosInterface;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PosInterface;
 
 namespace JibresBooster.lib.PcPos
 {
     //class Asnapardakht
     public partial class Asnapardakht : ITransactionDoneHandler
     {
-        private static PCPos pcPos = new PCPos();
+        private static readonly PCPos pcPos = new PCPos();
         private static string IP;
         private static string COMPORT;
         private static string AMOUNT;
@@ -18,15 +15,15 @@ namespace JibresBooster.lib.PcPos
 
         public void fire(Dictionary<string, string> _args)
         {
-            var myAsanpardakht = new Asnapardakht();
+            Asnapardakht myAsanpardakht = new Asnapardakht();
 
             // check input value and fill with default values
             fill(_args);
 
 
-            if(initLan(IP))
+            if (initLan(IP))
             {
-                if(myAsanpardakht.saleAsync(AMOUNT, INVOICE))
+                if (myAsanpardakht.saleAsync(AMOUNT, INVOICE))
                 {
 
                 }
@@ -46,7 +43,7 @@ namespace JibresBooster.lib.PcPos
         }
 
 
-        public Boolean saleAsync(string _sum, string _invoice)
+        public bool saleAsync(string _sum, string _invoice)
         {
             if (string.IsNullOrEmpty(_sum))
             {
@@ -63,9 +60,9 @@ namespace JibresBooster.lib.PcPos
         }
 
 
-        private static Boolean initLan(string _ip, int _port = 17000)
+        private static bool initLan(string _ip, int _port = 17000)
         {
-            if(string.IsNullOrEmpty(_ip))
+            if (string.IsNullOrEmpty(_ip))
             {
                 return false;
             }
@@ -76,7 +73,7 @@ namespace JibresBooster.lib.PcPos
         }
 
 
-        private static Boolean initSerial(string _com)
+        private static bool initSerial(string _com)
         {
             if (string.IsNullOrEmpty(_com))
             {

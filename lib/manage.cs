@@ -1,19 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Security.Principal;
 
 namespace JibresBooster.lib
 {
-    class manage
+    internal class manage
     {
-        static void RestartAsAdmin()
+        public static void RestartAsAdmin()
         {
-            var startInfo = new ProcessStartInfo("JibresBooster.exe") { Verb = "runas" };
+            ProcessStartInfo startInfo = new ProcessStartInfo("JibresBooster.exe") { Verb = "runas" };
             Process.Start(startInfo);
             Environment.Exit(0);
+        }
+
+        public static bool IsAdministrator()
+        {
+            return (new WindowsPrincipal(WindowsIdentity.GetCurrent()))
+                      .IsInRole(WindowsBuiltInRole.Administrator);
         }
     }
 }

@@ -1,15 +1,10 @@
-﻿using JibresBooster.translation;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using JibresBooster.translation;
 
 namespace JibresBooster.lib
 {
-    class notif
+    internal class notif
     {
         private static System.Windows.Forms.NotifyIcon myNotif;
 
@@ -105,8 +100,8 @@ namespace JibresBooster.lib
         {
             string result = "";
             Assembly executingAssembly = Assembly.GetExecutingAssembly();
-            var fieVersionInfo = FileVersionInfo.GetVersionInfo(executingAssembly.Location);
-            if(_type == "desc")
+            FileVersionInfo fieVersionInfo = FileVersionInfo.GetVersionInfo(executingAssembly.Location);
+            if (_type == "desc")
             {
                 result = fieVersionInfo.CompanyName;
             }

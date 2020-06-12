@@ -9,7 +9,7 @@
     <RepositoryUrl>https://github.com/jibres/JibresBooster</RepositoryUrl>
     <PackageTags>Jibres, Booster,</PackageTags>
     <NeutralLanguage></NeutralLanguage>
-    <AssemblyName>Jibres Booster</AssemblyName>
+    <AssemblyName>JibresBooster</AssemblyName>
     <RootNamespace>JibresBooster</RootNamespace>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <Win32Resource />

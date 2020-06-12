@@ -13,6 +13,15 @@
     <RootNamespace>jibres-booster-v2</RootNamespace>
     <ApplicationIcon />
     <Win32Resource />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>Boost power of Jibres to break windows!</Description>
+    <RepositoryType>Github</RepositoryType>
+    <Copyright>Some right reserved!</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,6 +46,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

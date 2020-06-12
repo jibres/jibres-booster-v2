@@ -6,7 +6,7 @@
     <Company>Jibres</Company>
     <PackageProjectUrl>https://jibres.com/</PackageProjectUrl>
     <PackageIconUrl>https://jibres.com/favicon.ico</PackageIconUrl>
-    <RepositoryUrl>https://github.com/jibres/jibres-booster-v2</RepositoryUrl>
+    <RepositoryUrl>https://github.com/jibres/JibresBooster</RepositoryUrl>
     <PackageTags>Jibres, Booster,</PackageTags>
     <NeutralLanguage></NeutralLanguage>
     <AssemblyName>Jibres Booster</AssemblyName>

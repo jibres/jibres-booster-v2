@@ -10,7 +10,7 @@
     <PackageTags>Jibres, Booster,</PackageTags>
     <NeutralLanguage></NeutralLanguage>
     <AssemblyName>Jibres Booster</AssemblyName>
-    <RootNamespace>jibres-booster-v2</RootNamespace>
+    <RootNamespace>JibresBooster</RootNamespace>
     <ApplicationIcon />
     <Win32Resource />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>

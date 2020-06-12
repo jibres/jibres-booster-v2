@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     class ping
     {

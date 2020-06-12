@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     public static class str
     {

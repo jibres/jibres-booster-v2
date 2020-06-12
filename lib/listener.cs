@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Net;
 using System.IO;
-using JibresBooster1.translation;
+using JibresBooster.translation;
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     class listener
     {

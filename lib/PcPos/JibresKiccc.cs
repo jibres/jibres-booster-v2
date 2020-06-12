@@ -7,10 +7,10 @@ using System.IO.Ports;
 using System.Text.RegularExpressions;
 using Kiccc.Ing.PcPos;
 using Kiccc.Ing.PcPos.Serial;
-using JibresBooster1.lib;
+using JibresBooster.lib;
 using System.Threading;
 
-namespace JibresBooster1.lib.PcPos
+namespace JibresBooster.lib.PcPos
 {
     class JibresKiccc
     {

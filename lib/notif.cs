@@ -1,4 +1,4 @@
-﻿using JibresBooster1.translation;
+﻿using JibresBooster.translation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     class notif
     {
@@ -57,7 +57,7 @@ namespace JibresBooster1.lib
             {
                 myNotif.ShowBalloonTip(1000, _title, _desc, System.Windows.Forms.ToolTipIcon.None);
             }
-            
+
         }
 
         public static void warn(string _title, string _desc, bool _hidden = false)

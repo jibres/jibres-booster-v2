@@ -4,9 +4,9 @@ using System.IO.Ports;
 using System.Linq;
 using System.Management;
 using System.Text;
-using JibresBooster1.lib;
+using JibresBooster.lib;
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     class port
     {

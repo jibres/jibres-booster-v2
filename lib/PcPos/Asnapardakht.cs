@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JibresBooster1.lib.PcPos
+namespace JibresBooster.lib.PcPos
 {
     //class Asnapardakht
     public partial class Asnapardakht : ITransactionDoneHandler

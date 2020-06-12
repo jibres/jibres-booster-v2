@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     class faxModem
     {

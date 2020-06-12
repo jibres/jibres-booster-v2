@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     class save
     {

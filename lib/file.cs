@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JibresBooster1.lib
+namespace JibresBooster.lib
 {
     class file
     {

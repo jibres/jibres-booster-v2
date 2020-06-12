@@ -18,6 +18,7 @@
     <RepositoryType>Github</RepositoryType>
     <Copyright>Some right reserved!</Copyright>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <UserSecretsId>5991b26e-d604-4ea9-8a5a-33d15698199f</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

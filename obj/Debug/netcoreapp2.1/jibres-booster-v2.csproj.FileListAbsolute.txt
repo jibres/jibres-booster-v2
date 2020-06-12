@@ -1,0 +1,14 @@
+D:\web\projects\jibres-booster-v2\bin\Debug\netcoreapp2.1\jibres-booster-v2.deps.json
+D:\web\projects\jibres-booster-v2\bin\Debug\netcoreapp2.1\jibres-booster-v2.runtimeconfig.json
+D:\web\projects\jibres-booster-v2\bin\Debug\netcoreapp2.1\jibres-booster-v2.runtimeconfig.dev.json
+D:\web\projects\jibres-booster-v2\bin\Debug\netcoreapp2.1\jibres-booster-v2.dll
+D:\web\projects\jibres-booster-v2\bin\Debug\netcoreapp2.1\jibres-booster-v2.pdb
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.csprojAssemblyReference.cache
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.csproj.CoreCompileInputs.cache
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.RazorAssemblyInfo.cache
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.RazorAssemblyInfo.cs
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.AssemblyInfoInputs.cache
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.AssemblyInfo.cs
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.RazorTargetAssemblyInfo.cache
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.dll
+D:\web\projects\jibres-booster-v2\obj\Debug\netcoreapp2.1\jibres-booster-v2.pdb

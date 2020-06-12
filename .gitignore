@@ -1,0 +1,13 @@
+*.DS_Store
+desktop.ini
+*Thumbs.db
+~*.docx
+~*.tmp
+~$*.pptx
+*tg.json
+
+node_modules
+.sass-cache
+package-lock.json
+
+

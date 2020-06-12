@@ -7,7 +7,7 @@
       "sslPort": 0
     },
     "iisExpress": {
-      "applicationUrl": "http://localhost:2158",
+      "applicationUrl": "http://localhost:9759",
       "sslPort": 44392
     }
   },
@@ -16,12 +16,12 @@
     "IIS Express": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "jibres/api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "nativeDebugging": false,
-      "applicationUrl": "https://jibres.local:9759/"
+      "applicationUrl": "https://localhost:9759/"
     },
     "JibresBooster": {
       "commandName": "Project",

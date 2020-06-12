@@ -8,12 +8,13 @@
 [Dd]ebug/
 #[Rr]elease/
 x64/
-[Bb]in/
+#[Bb]in/
 [Oo]bj/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+
 
 *_i.c
 *_p.c
@@ -128,3 +129,5 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+
+.vs/
